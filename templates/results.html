@@ -1,32 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+    <title></title>
     <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
 </head>
 <body>
 
-	<header>
-		<div class="container">
-		<div id="brandname">
-			ML App
-		</div>
-		<h2>Ml Check</h2>
-		
-	</div>
-	</header>
-	<p style="color:blue;font-size:20;text-align: center;"><b>Results for ML</b></p>
-	<div class="results">
+<header>
+    <div class="container">
+        <div id="brandname">
+            ML App
+        </div>
 
+    </div>
+</header>
+<p style="color:blue;font-size:20;text-align: center;"><b>Results for ML</b></p>
+<div class="results">
 
-		
-	{% if prediction == 1%}
-	<h2 style="color:red;">Holaa</h2>
-	{% elif prediction == 0%}
-	<h2 style="color:blue;">Hola</h2>
-	{% endif %}
+    <h5 style="color:red;text-align: center;">Input : {{comment }} </h5>
+    <h5 style="color:red;text-align: center;">Prediction : {{prediction}}</h5>
 
-	</div>
+    {% if prediction == 1%}
+    <h2 style="color:red;">Holaa</h2>
+    {% elif prediction == 0%}
+    <h2 style="color:blue;">Hola</h2>
+    {% endif %}
+
+</div>
 
 </body>
 </html>
